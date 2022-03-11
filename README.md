@@ -1,6 +1,8 @@
 # Cahoo
-A clone of Yahoo answers.
 ![Status](https://img.shields.io/badge/status-work--in--progress-red)
+
+A clone of Yahoo answers.
+
 
 ## Table of Content:
 - [Cahoo](#cahoo)
@@ -13,7 +15,7 @@ A clone of Yahoo answers.
 
 ### 📜 Description:
 
-[User Story Map](/usm.svg)
+[User Story Map](/resources/usm.svg)
 
 <p align="center">
 
