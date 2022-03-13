@@ -2,19 +2,45 @@ package com.kalaiz.cahoo_backend;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Answer {
 	 private boolean isBestAnswer;
 	 private String answer;
-//	 private User answerer;
+	 @OneToOne
+     private User answerer;
 	 private int numberOfUpvotes;
 	 private int numberOfDownvotes;
 	 private int rating;
-		private @Id @GeneratedValue Long id;
+	private @Id  @GeneratedValue(strategy=GenerationType.AUTO) Long id;
 	 
-	 
+	protected Answer() {}
+	
+	public Answer(boolean isBestAnswer, String answer, User answerer, int numberOfUpvotes, int numberOfDownvotes,
+			int rating) {
+		this.isBestAnswer = isBestAnswer;
+		this.answer = answer;
+		this.answerer = answerer;
+		this.numberOfUpvotes = numberOfUpvotes;
+		this.numberOfDownvotes = numberOfDownvotes;
+		this.rating = rating;
+	}
+
+	public User getAnswerer() {
+		return answerer;
+	}
+	public void setAnswerer(User answerer) {
+		this.answerer = answerer;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public boolean isBestAnswer() {
 		return isBestAnswer;
 	}

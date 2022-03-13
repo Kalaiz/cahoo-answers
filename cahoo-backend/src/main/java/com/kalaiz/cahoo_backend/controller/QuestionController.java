@@ -1,9 +1,12 @@
-package com.kalaiz.cahoo_backend;
+package com.kalaiz.cahoo_backend.controller;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.kalaiz.cahoo_backend.Question;
+import com.kalaiz.cahoo_backend.repository.QuestionRepository;
 
 @RestController
 public class QuestionController {
