@@ -1,11 +1,11 @@
-# Cahoo
+# Cahoo Answers
 ![Status](https://img.shields.io/badge/status-work--in--progress-red)
 
 A clone of Yahoo answers.
 
 
 ## Table of Content:
-- [Cahoo](#cahoo)
+- [Cahoo Answers](#cahoo-answers)
   - [Table of Content:](#table-of-content)
     - [📜 Description:](#-description)
     - [🛠️ Tools Used:](#️-tools-used)
