@@ -16,6 +16,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatInputModule} from '@angular/material/input'
+
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,10 @@ import {MatInputModule} from '@angular/material/input'
     MatTabsModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatGridListModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
