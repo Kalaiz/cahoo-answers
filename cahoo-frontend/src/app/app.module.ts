@@ -14,6 +14,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatInputModule} from '@angular/material/input'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,
     MatButtonModule,
     MatTabsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

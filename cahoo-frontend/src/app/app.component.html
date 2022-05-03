@@ -1,9 +1,8 @@
-<mat-toolbar color="primary" style="height:25px">
-  
+<ng-template #toolbarContent>
   <button mat-button>
-  <mat-icon >home</mat-icon>
-  <span>Home</span>
-</button>
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
   <button mat-button>Mail</button>
   <button mat-button>Search</button>
   <button mat-button>News</button>
@@ -15,7 +14,47 @@
   <button mat-button>Flickr</button>
   <button mat-button>Mobile</button>
   <button mat-button>More</button>
+</ng-template>
 
-</mat-toolbar>
 
+<mat-drawer-container fxFlexFill>
+
+  <mat-drawer #drawer mode="side" [opened]="isOpened && drawer.opened" >
+    <div fxLayout="column">
+      <ng-template *ngTemplateOutlet="toolbarContent"></ng-template>
+    </div>
+  </mat-drawer>
+
+  <mat-toolbar color="primary" style="height:35px">
+    <div fxHide fxShow.lt-md>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div fxShow fxHide.lt-md>
+      <ng-template *ngTemplateOutlet="toolbarContent"></ng-template>
+    </div>
+  </mat-toolbar>
+
+  <div fxLayout="row">
+  <div fxHide fxShow.gt-sm fxLayout="column" fxFlex="0 1 200px" >
+    <img mat-card-image src="assets/images/yahoo-answers-logo.jpg">
+    <a mat-button  style="text-align:left" color="primary" *ngFor="let category of CATEGORIES "href="" >{{ category }}</a>
+    </div>
+
+  <div fxFlex="20 0 auto" >
+    <mat-form-field fxFlex="20 0 auto" appearance="outline">
+      <input type="search" matInput >
+    </mat-form-field>
+
+  </div>
+  <div fxHide fxShow.gt-sm fxFlex="10 0 auto" >
+    <mat-form-field fxFlex="10 0 auto" appearance="outline">
+      <input type="search" matInput >
+    </mat-form-field>
+
+  </div>
+
+</div>
+</mat-drawer-container>
 <router-outlet></router-outlet>
