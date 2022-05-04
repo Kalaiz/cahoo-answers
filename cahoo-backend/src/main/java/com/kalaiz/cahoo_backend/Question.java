@@ -16,7 +16,7 @@ public class Question {
 	@OneToMany(orphanRemoval=true)
     private List<Answer> answers;
 	
-	
+//	TODO: Create a dynamically modifying property: numberOfAnswers;
 	public Question(boolean isResolved, String question, List<Answer> answers) {
 		this.isResolved = isResolved;
 		this.question = question;

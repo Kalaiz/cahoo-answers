@@ -1,0 +1,15 @@
+/* https://github.com/angular/components/issues/7975 */
+.clean-form-field  {
+    margin-bottom: -1.25em;
+}
+
+.question-mark-icon {
+    font-size: 50px;
+    height: 50px ;
+    width: 50px ;
+    margin: 0px;
+}
+
+.clean-li, li.menu-item:not(:last-child) { 
+    margin-bottom: 10px;  
+ }
