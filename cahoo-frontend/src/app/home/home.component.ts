@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Question } from '../shared/question';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'home',
@@ -7,13 +9,16 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private homeService: HomeService) { }
+
+  recentQuestions: Question[] = [];
 
   ngOnInit(): void {
+    this.getRecentQuestions();
   }
 
   isOpened: boolean = true;
-  
+
   readonly DESKTOP_VIEW_WIDTH: number = 960;
   readonly CATEGORIES: Array<string> = ["All categories", "Arts & Humanities",
     "Beauty & Style", "Business & Finance", "Cars & Transportation", "Computers & Internet", "Consumer Electronics", "Dining Out"
@@ -24,6 +29,10 @@ export class HomeComponent implements OnInit {
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
     this.isOpened = width <= this.DESKTOP_VIEW_WIDTH;
+  }
+
+  getRecentQuestions(): void {
+    this.homeService.getRecentQuestions().subscribe(recentQuestions => this.recentQuestions = recentQuestions);
   }
 
 }

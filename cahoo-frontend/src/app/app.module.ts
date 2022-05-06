@@ -20,6 +20,8 @@ import {MatInputModule} from '@angular/material/input'
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
+
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     MatCardModule,
     MatGridListModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

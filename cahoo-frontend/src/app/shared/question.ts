@@ -1,13 +1,8 @@
-class Question{
-    private isResolved:boolean;
-    private question:string;
-    private answers:Answer[];
+import { Answer } from "./answer";
 
-    constructor(isResolved:boolean,question:string,answers:Answer[]){
-        this.isResolved=isResolved;
-        this.answers=answers;
-        this.question= question;
-    }
-
+export interface Question{
+    isResolved:boolean;
+    question:string;
+    answers:Answer[];
 
 }
