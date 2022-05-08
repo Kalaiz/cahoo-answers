@@ -1,7 +1,7 @@
 # Cahoo Answers
 ![Status](https://img.shields.io/badge/status-work--in--progress-red)
 
-A clone of Yahoo answers.
+A responsive webapp the allows users to post and answer question. Essentially a clone of the [deprecated Yahoo answers](https://help.yahoo.com/kb/SLN35642.html).
 
 
 ## Table of Content:
@@ -26,10 +26,17 @@ A clone of Yahoo answers.
 
 
 ### 🛠️ Tools Used:
+- Java
+- Typescript
+- Spring web
+- Angular
+- Angular Material
+- Angular flex-box
+- Jasmine
 - TextUSM vscode extension
 
 
-### ✍️ [Reflection](/resources/reflection.md)
+### ✍️ [Reflection]()
 
 
 
