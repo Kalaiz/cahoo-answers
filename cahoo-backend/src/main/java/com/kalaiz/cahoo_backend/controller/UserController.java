@@ -6,16 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kalaiz.cahoo_backend.User;
-import com.kalaiz.cahoo_backend.repository.UserRepository;
+import com.kalaiz.cahoo_backend.AppUser;
+import com.kalaiz.cahoo_backend.repository.AppUserRepository;
+
+
 
 @RestController
 public class UserController {
-	 private UserRepository userRepository;
+	 private AppUserRepository userRepository;
 	 
 	 @GetMapping("user/{userId}")
-	 List<User> getUser(@PathVariable Long userId){
-//		 TODO:
+	 List<AppUser> getUser(@PathVariable Long userId){
 		 return userRepository.findAll();
 	 }
 	

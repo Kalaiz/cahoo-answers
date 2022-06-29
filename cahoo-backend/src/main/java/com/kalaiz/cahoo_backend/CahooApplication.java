@@ -11,8 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.kalaiz.cahoo_backend.repository.AnswerRepository;
+import com.kalaiz.cahoo_backend.repository.AppUserRepository;
 import com.kalaiz.cahoo_backend.repository.QuestionRepository;
-import com.kalaiz.cahoo_backend.repository.UserRepository;
+
 
 @SpringBootApplication
 public class CahooApplication {
@@ -20,14 +21,14 @@ public class CahooApplication {
 	private static final Logger LOG = LoggerFactory.getLogger(CahooApplication.class);
 
 	@Autowired
-	private UserRepository userRepository;
+	private AppUserRepository userRepository;
 
 	@Autowired
 	private AnswerRepository answerRepository;
 
 	@Autowired
 	private QuestionRepository questionRepository;
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(CahooApplication.class, args);
 	}
@@ -37,9 +38,9 @@ public class CahooApplication {
 	@Bean
 	InitializingBean populateDatabase() {
 		return () -> {
-			User userOne = new User("User one", 0);
-			User userTwo = new User("User two", 0);
-			User userThree = new User("User three", 0);
+			AppUser userOne = new AppUser("User one", null, null, null, null, 0, null, null);
+			AppUser userTwo = new AppUser("User two", null, null, null, null, 0, null, null);
+			AppUser userThree = new AppUser("User three", null, null, null, null, 0, null, null);
 			userRepository.save(userOne);
 			userRepository.save(userTwo);
 			userRepository.save(userThree);

@@ -11,7 +11,7 @@ public class Answer {
 	private boolean isBestAnswer;
 	private String answer;
 	@OneToOne
-	private User answerer;
+	private AppUser answerer;
 	private int numberOfUpvotes;
 	private int numberOfDownvotes;
 	private int rating;
@@ -20,7 +20,7 @@ public class Answer {
 	protected Answer() {
 	}
 
-	public Answer(boolean isBestAnswer, String answer, User answerer, int numberOfUpvotes, int numberOfDownvotes,
+	public Answer(boolean isBestAnswer, String answer, AppUser answerer, int numberOfUpvotes, int numberOfDownvotes,
 			int rating) {
 		this.isBestAnswer = isBestAnswer;
 		this.answer = answer;
@@ -30,11 +30,11 @@ public class Answer {
 		this.rating = rating;
 	}
 
-	public User getAnswerer() {
+	public AppUser getAnswerer() {
 		return answerer;
 	}
 
-	public void setAnswerer(User answerer) {
+	public void setAnswerer(AppUser answerer) {
 		this.answerer = answerer;
 	}
 
