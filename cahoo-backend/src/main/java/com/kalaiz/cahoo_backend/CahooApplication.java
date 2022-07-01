@@ -38,9 +38,9 @@ public class CahooApplication {
 	@Bean
 	InitializingBean populateDatabase() {
 		return () -> {
-			AppUser userOne = new AppUser("User one", null, null, null, null, 0, null, null);
-			AppUser userTwo = new AppUser("User two", null, null, null, null, 0, null, null);
-			AppUser userThree = new AppUser("User three", null, null, null, null, 0, null, null);
+			AppUser userOne = new AppUser("User one", null, null, null, Role.USER, 0, false, null);
+			AppUser userTwo = new AppUser("User two", null, null, null, Role.USER, 0, false, null);
+			AppUser userThree = new AppUser("User three", null, null, null, Role.USER, 0, false, null);
 			userRepository.save(userOne);
 			userRepository.save(userTwo);
 			userRepository.save(userThree);

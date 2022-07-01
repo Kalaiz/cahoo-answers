@@ -18,8 +18,7 @@ A responsive webapp the allows users to post and answer question. Essentially a 
 
 
 
-
-<p align="center"> <video src="https://user-images.githubusercontent.com/44941115/176428183-9cea7ef0-32ad-42e4-8be8-f53a2945fb7e.mp4" controls="controls" /> </p>
+<p align="center"> <video src="/resources/preview.mp4" controls="controls" /> </p>
 <p align="center">
 <sub>A slight peek at the progress so far.</sub>
 </p>

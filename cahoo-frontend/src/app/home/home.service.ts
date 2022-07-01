@@ -7,7 +7,7 @@ import { Question } from '../shared/question';
     providedIn: 'root',
 })
 export class HomeService {
-    private recentQuestionUrl = BASE_URL + "/recent-questions";
+    private recentQuestionUrl = BASE_URL + "/api/recent-questions";
 
     constructor(private http: HttpClient) { }
 

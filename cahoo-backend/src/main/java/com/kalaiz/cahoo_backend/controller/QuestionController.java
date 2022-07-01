@@ -18,7 +18,7 @@ QuestionController(QuestionRepository questionRepository) {
 }
 
 @CrossOrigin(origins ="http://localhost:4200/") // Allowing Front end computational resource (Client side) URL
-@GetMapping("/recent-questions")
+@GetMapping("/api/recent-questions")
 List<Question> recentQuestions(){
 //	 TODO
 	return questionRepository.findAll();
