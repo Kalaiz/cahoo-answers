@@ -17,8 +17,7 @@ A responsive webapp the allows users to post and answer question. Essentially a 
 [User Story Map](/resources/usm.svg)
 
 
-
-<p align="center"> <video src="/resources/preview.mp4" controls="controls" /> </p>
+<p align="center"> <video src="https://user-images.githubusercontent.com/44941115/176813463-b7b1a895-5817-4542-a9b7-e0b570005d8a.mp4" controls="controls" /> </p>
 <p align="center">
 <sub>A slight peek at the progress so far.</sub>
 </p>
