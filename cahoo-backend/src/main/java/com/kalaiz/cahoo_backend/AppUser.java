@@ -18,6 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 public class AppUser implements UserDetails{
 
+	// TODO: Remove username
 	private @Id @GeneratedValue(strategy=GenerationType.AUTO)Long id;
 	private String name;
 	private String username;

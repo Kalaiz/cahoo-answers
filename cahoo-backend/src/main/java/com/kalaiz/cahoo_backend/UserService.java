@@ -19,12 +19,18 @@ public class UserService implements UserDetailsService{
 	}
 	
 	private final static String USER_NOT_FOUND = "User who has email %s not found";
+	
 	@Override
 	public UserDetails loadUserByUsername(String email) 
 			throws UsernameNotFoundException {
 
 		return userRepository.findByEmail(email)
 				.orElseThrow(()-> new UsernameNotFoundException(String.format(USER_NOT_FOUND,email)));
+	}
+	
+	public void createUser(Registration request) {
+		AppUser user = new AppUser(request.getName(),request.getName(),request.getEmail(),request.getPassword(),Role.USER,0,false,true);
+		userRepository.saveAndFlush(user);
 	}
 
 	
